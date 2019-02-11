@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+	char *error = "EINVAL";
+	if(strcmp("EAGAIN",error) == 0)
+	{
+		printf("The file descriptor fd refers to a file other than a socket and has been marked non blocking (O_NONBLOCK), and the read would block. or No Data available currently Try Again.");
+	}
+	else if(strcmp("EBADF",error) == 0) 
+	{
+		printf("fd is not a valid file descriptor or is not open for reading.");
+	}
+	else if(strcmp("EFAULT",error) == 0) 
+	{
+		printf("buf is outside your accessible address space");
+	}
+	else if(strcmp("EINTR",error) == 0) 
+	{
+		printf("The call was interrupted by a signal before any data was read; see signal(7)");
+	}
+	else if(strcmp("EINVAL",error) == 0) 
+	{
+		printf("fd is attached to an object which is unsuitable for reading or the file was opened with the O_DIRECT flag, and either the address specified in buf, the value specified in count, or the current file offset is not suitably aligned.\
+		fd was created via a call to timerfd_create(2) and the wrong size buffer was given to read() see timerfd_create(2) for further information.");
+	}
+	else if(strcmp("EIO",error) == 0) 
+	{
+		printf("I/O error. This will happen for example when the process is in a background process group, tries to read from its controlling terminal, and either it is ignoring or blocking SIGTTIN or its process group is orphaned. It may also occur when there is a low-level I/O error while reading from a disk or tape.");
+	}
+	else if(strcmp("EISDIR",error) == 0) 
+	{
+		printf("fd refers to a directory");
+	}
+	else 
+	{
+		printf("no match");
+	}
+}
