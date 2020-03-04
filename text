@@ -1,0 +1,10 @@
+So your assignment requires you to create the programs which has to test given grammar:
+It should pass the following test cases:
+
+1.Listing the Non Terminals and Terminals - This is straight forwards
+2.Removal of useless symbol from grammar - this is also straight forwards
+3.Listing First Set -
+4.Listing Follow Set - 
+5.Grammar have a Predictive parser - having or not having any useless symbol
+
+all the above mentioned instruction/task needs to be taken from command line  
