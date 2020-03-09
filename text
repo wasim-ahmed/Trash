@@ -8,3 +8,11 @@ It should pass the following test cases:
 5.Grammar have a Predictive parser - having or not having any useless symbol
 
 all the above mentioned instruction/task needs to be taken from command line  
+
+S -> A B #
+S -> C #
+C -> c #
+S -> a #
+A -> a A #
+B -> b #
+##
